@@ -14,7 +14,7 @@ class App extends Component {
             我的React(create-react-app)
           </p>
           <Home />
-          <Button type="danger" ghost>danger</Button>
+          <Button type="danger" ghost>前方的路（antfin）</Button>
         </header>
       </div>
     );
