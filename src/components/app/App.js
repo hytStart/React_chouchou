@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import logo from './logo.svg';
 import './App.css';
-import { Button, notification, Icon } from 'antd';
+// import { Button, notification, Icon } from 'antd';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +29,16 @@ class App extends Component {
             我的React(create-react-app)
             <br/>
             <Link to='/home'>Come On</Link>
+            <br/>
+            <Link
+              to={{
+                pathname: '/home',
+                search: '?name=ting',
+                state: { price: 18 }
+              }}
+            >
+              to: object
+            </Link>
           </p>
           {/* <Button type="primary" ghost>前方的路（antfin）</Button> */}
         </header>
