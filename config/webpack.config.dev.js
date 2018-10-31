@@ -264,23 +264,54 @@ module.exports = {
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
           // By default we support CSS Modules with the extension .module.css
+          
+          // 不是antd的css，添加modules可以使用类似 import style from './index.css'
+          // {
+          //   test: cssRegex,
+          //   exclude: cssModuleRegex,
+          //   use: getStyleLoaders({
+          //     modules: true,
+          //     importLoaders: 1,
+          //   }),
+          // },
+          // {
+          //   test: /\.css$/,
+          //   exclude: cssModuleRegex,
+          //   use: [
+          //     'style-loader',
+          //     'css-loader?modules',
+          //     "postcss-loader",
+          //   ],
+          // },
           {
-            test: cssRegex,
-            exclude: cssModuleRegex,
-            use: getStyleLoaders({
-              importLoaders: 1,
-            }),
+            test: /\.css$/,
+            exclude: /(node_modules)/,
+            loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]'
+          },
+          // antd的东西不可以使用 modules = true 下面两种写法就是为了
+          // {
+          //   test: /\.css$/,
+          //   exclude: /(src)/,
+          //   loader: 'style-loader!css-loader'
+          // },
+          {
+            test: /\.css$/,
+            include: /(node_modules)/,
+            use: [
+              'style-loader',
+              'css-loader',
+              "postcss-loader",
+            ],
           },
           // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
           // using the extension .module.css
-          {
-            test: cssModuleRegex,
-            use: getStyleLoaders({
-              importLoaders: 1,
-              modules: true,
-              getLocalIdent: getCSSModuleLocalIdent,
-            }),
-          },
+          // {
+          //   test: cssModuleRegex,
+          //   use: getStyleLoaders({
+          //     importLoaders: 1,
+          //     getLocalIdent: getCSSModuleLocalIdent,
+          //   }),
+          // },
           // Opt-in support for SASS (using .scss or .sass extensions).
           // Chains the sass-loader with the css-loader and the style-loader
           // to immediately apply all styles to the DOM.

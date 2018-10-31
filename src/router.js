@@ -26,7 +26,7 @@ class Router extends React.Component {
         /**
          * ② forceRefresh 当浏览器不支持 HTML5 的 history API 时强制刷新页面。
          */
-        const supportsHistory = 'pushState' in window.history
+        // const supportsHistory = 'pushState' in window.history
         return(
             <BrowserRouter
                 getUserConfirmation={

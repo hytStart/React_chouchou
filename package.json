@@ -105,12 +105,10 @@
       "node"
     ]
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
   "devDependencies": {
-    "babel-plugin-import": "^1.10.0"
+    "babel-plugin-import": "^1.10.0",
+    "babel-preset-env": "^1.7.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0"
   }
 }
