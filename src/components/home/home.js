@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, Prompt } from 'react-router-dom'
+import { sss } from './cfg.js'
 
 class Home extends React.Component {
     constructor(props) {
@@ -18,7 +19,9 @@ class Home extends React.Component {
                 <NavLink
                     to="/about"
                     activeStyle={{ color: 'green', fontWeight: 'bold' }}
-                >MyBlog</NavLink>
+                >
+                    {sss}
+                </NavLink>
                 <Prompt 
                     when={this.state.price} 
                     message="数据尚未保存，确定离开？"
