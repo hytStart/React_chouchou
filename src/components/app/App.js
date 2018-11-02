@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import logo from './logo.svg';
 import style from './App.css';
-import styles from './test.css';
-import { notification, Icon, Button } from 'antd';
+import { notification, Icon } from 'antd';
 
 class App extends Component {
     constructor(props) {
@@ -38,9 +37,6 @@ class App extends Component {
                             我的React(create-react-app)
                       </Link>
                   </p>
-                  <div className={styles.testLess}>
-                      test less
-                  </div>
                 </header>
             </div>
         );

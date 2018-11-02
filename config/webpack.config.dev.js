@@ -318,23 +318,38 @@ module.exports = {
           // By default we support SASS Modules with the
           // extensions .module.scss or .module.sass
           {
-            test: sassRegex,
-            exclude: sassModuleRegex,
-            use: getStyleLoaders({ importLoaders: 2 }, 'sass-loader'),
+            test: /\.scss$/,
+            exclude: /(node_modules)/,
+            loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]!sass-loader'
           },
-          // Adds support for CSS Modules, but using SASS
-          // using the extension .module.scss or .module.sass
           {
-            test: sassModuleRegex,
-            use: getStyleLoaders(
-              {
-                importLoaders: 2,
-                modules: true,
-                getLocalIdent: getCSSModuleLocalIdent,
-              },
-              'sass-loader'
-            ),
+            test: /\.scss$/,
+            include: /(node_modules)/,
+            use: [
+              'style-loader',
+              'css-loader',
+              "postcss-loader",
+              "sass-loader",
+            ],
           },
+          // {
+          //   test: sassRegex,
+          //   exclude: sassModuleRegex,
+          //   use: getStyleLoaders({ importLoaders: 2 }, 'sass-loader'),
+          // },
+          // // Adds support for CSS Modules, but using SASS
+          // // using the extension .module.scss or .module.sass
+          // {
+          //   test: sassModuleRegex,
+          //   use: getStyleLoaders(
+          //     {
+          //       importLoaders: 2,
+          //       modules: true,
+          //       getLocalIdent: getCSSModuleLocalIdent,
+          //     },
+          //     'sass-loader'
+          //   ),
+          // },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.
