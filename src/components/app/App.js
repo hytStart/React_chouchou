@@ -14,12 +14,24 @@ class App extends Component {
         this.showNotification()
     }
     showNotification = _ => {
-        notification.open({
-            message: 'You can follow me',
-            description: 'https://github.com/hytStart',
-            icon: <Icon type="github" />,
-            duration: 10,
-        })
+        const openNotification = () => {
+            notification.open({
+                message: 'You can follow me',
+                description: (
+                    <div>
+                        <a href="https://github.com/hytStart">
+                            GitHub地址： 
+                            https://github.com/hytStart
+                        </a>
+                    </div>
+                ),
+                icon: <Icon type="github" />,
+                duration: 0,
+            })
+            localStorage.setItem('chou_First', JSON.stringify(true))
+        }
+        const isFirst = JSON.parse(localStorage.getItem('chou_First'))
+        !isFirst && openNotification()
     }
     render() {
         return (
