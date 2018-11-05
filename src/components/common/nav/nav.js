@@ -11,6 +11,8 @@ class NavMenu extends React.Component {
         this.state = {
         }
     }
+    componentDidMount() {
+    }
     renderSubmenu = menu => {
         return menu.map(item => {
             let res = null
@@ -45,10 +47,10 @@ class NavMenu extends React.Component {
         ))
     }
     render() {
-        // 取第一项为menu默认项
-        const { menu: [{ title }] } = menuConfig
+        const { location: { pathname } } = this.props
+        const currenTitle = pathname.split('/')[pathname.split('/').length-1]
         return(
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={[title]} style={{ background: '#282c34' }}>
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={[currenTitle]} style={{ background: '#282c34' }}>
                 {this.renderSubmenu(menuConfig.menu)}
             </Menu>
         )

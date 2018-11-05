@@ -20,7 +20,6 @@ class Home extends React.Component {
         })
     }
     render() {
-        console.log(this.props)
         return (
             <div className={style.wrap}>
                 <Layout>
@@ -31,7 +30,7 @@ class Home extends React.Component {
                         style={{ background: '#282c34' }}
                     >
                         <div className={style.logo} />
-                        <NavMenu />
+                        <NavMenu {...this.props} />
                     </Sider>
                     <Layout>
                         <Header style={{ background: '#282c34', padding: 0 }}>
