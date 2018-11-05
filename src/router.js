@@ -35,12 +35,14 @@ class Router extends React.Component {
                 // forceRefresh={supportsHistory}
             >
                 <Switch>
-                    <Route exact path="/"render={() => <Redirect to='/app' push />} />        
+                    <Route exact path="/" render={() => <Redirect to='/app' push />} />        
+
                     <Route exact path="/app" component={App} />
-                    <Route exact path="/home" component={Home} />
+                    <Route path="/home" component={Home} />
+
                     {/* 别的都是exact,就可以404了 */}
                     <Route path="/404" component={Notfound} />
-                    <Route path="/" component={Notfound} />
+                    <Route path="*" component={Notfound} />
                 </Switch>
             </BrowserRouter>
         )

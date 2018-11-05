@@ -1,8 +1,9 @@
 import React from 'react'
-import { Layout, Menu, Icon } from 'antd'
+import { Layout, Icon } from 'antd'
 import style from './home.scss'
 import userImg from '../../images/userimg.jpg'
 import NavMenu from '../common/nav/nav.js'
+import creatRouters from '../../routers/routers.js'
 
 const { Header, Sider, Content, Footer } = Layout
 class Home extends React.Component {
@@ -19,6 +20,7 @@ class Home extends React.Component {
         })
     }
     render() {
+        console.log(this.props)
         return (
             <div className={style.wrap}>
                 <Layout>
@@ -41,7 +43,7 @@ class Home extends React.Component {
                             <img src={userImg} alt="" className={style.userImg} />
                         </Header>
                         <Content style={{ margin: '24px 16px 0px', padding: 24, background: '#fff', minHeight: 280 }}>
-                            Content
+                            {creatRouters(this.props.match.path)}
                         </Content>
                         <Footer style={{ textAlign: 'center' }}>
                             React-Redux-Router ©2018 Created by Yiting Huang

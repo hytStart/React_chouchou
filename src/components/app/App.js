@@ -41,9 +41,7 @@ class App extends Component {
                   <p>
                       <Link
                           to={{
-                                pathname: '/home',
-                                search: '?name=ting',
-                                state: { price: 18 }
+                                pathname: '/home/canvas',
                           }}
                         >
                             我的React(create-react-app)

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Menu, Icon } from 'antd'
 import menuConfig from './config.js'
 
@@ -16,12 +17,18 @@ class NavMenu extends React.Component {
             if(item && item.subs) {
                 res = (
                     <SubMenu key={item.title} title={item.title}>
+                        {/* <Icon type={item.icon} /> */}
                         {this.renderMenuItem(item.subs)}
                     </SubMenu>
                 )
             } else {
                 res = (
-                    <Menu.Item key={item.title}>{item.title}</Menu.Item>
+                    <Menu.Item key={item.title}>
+                        <Link to={item.path}>
+                            {/* <Icon type={item.icon} /> */}
+                            <span>{item.title}</span>
+                        </Link>
+                    </Menu.Item>
                 )
             }
             return res
@@ -29,24 +36,19 @@ class NavMenu extends React.Component {
     }
     renderMenuItem = (params = []) => {
         return params.map(item => (
-            <Menu.Item key={item.title}>{item.title}</Menu.Item>
+            <Menu.Item key={item.title}>
+                <Link to={item.path}>
+                    <Icon type={item.icon} />
+                    <span>{item.title}</span>
+                </Link>
+            </Menu.Item>
         ))
     }
     render() {
+        // 取第一项为menu默认项
+        const { menu: [{ title }] } = menuConfig
         return(
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} style={{ background: '#282c34' }}>
-                {/* <Menu.Item key="1">
-                    <Icon type="user" />
-                    <span>nav 1</span>
-                </Menu.Item>
-                <Menu.Item key="2">
-                    <Icon type="video-camera" />
-                    <span>nav 2</span>
-                </Menu.Item>
-                <Menu.Item key="3">
-                    <Icon type="upload" />
-                    <span>nav 3</span>
-                </Menu.Item> */}
+            <Menu theme="dark" mode="inline" defaultSelectedKeys={[title]} style={{ background: '#282c34' }}>
                 {this.renderSubmenu(menuConfig.menu)}
             </Menu>
         )
