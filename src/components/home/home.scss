@@ -23,7 +23,10 @@
   
 .logo {
     height: 64px;
+    line-height: 64px;
     background: #333;
+    color: #333;
+    text-align: center;
     background-image: url('../../images/logo.jpg');
     background-size: 100% 138%;
     background-repeat: no-repeat;

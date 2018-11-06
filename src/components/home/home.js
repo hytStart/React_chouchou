@@ -29,7 +29,9 @@ class Home extends React.Component {
                         collapsed={this.state.collapsed}
                         style={{ background: '#282c34' }}
                     >
-                        <div className={style.logo} />
+                        <div className={style.logo}>
+                            React Redux
+                        </div>
                         <NavMenu {...this.props} />
                     </Sider>
                     <Layout>

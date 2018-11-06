@@ -90,6 +90,12 @@ const menuConfig = {
             icon: 'rocket',
             component: 'canvas',
         },
+        {
+            path: '/home/redux',
+            title: 'redux',
+            icon: 'fork',
+            component: 'redux',
+        },
     ]
 }
 export default menuConfig

@@ -4,7 +4,7 @@ class Canvas extends React.Component {
     render() {
         return(
             <div>
-                canvas
+                canvasa
             </div>
         )
     }
