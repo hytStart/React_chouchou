@@ -57,10 +57,10 @@ const menuConfig = {
                     component: 'echarts',
                 },
                 {
-                    path: '/home/chart/recharts',
-                    title: 'recharts',
+                    path: '/home/chart/highcharts',
+                    title: 'highcharts',
                     icon: 'area-chart',
-                    component: 'recharts',
+                    component: 'highcharts',
                 },
             ]
         },

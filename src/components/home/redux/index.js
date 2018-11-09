@@ -12,7 +12,7 @@ class ReduxComponent extends React.Component {
     componentDidMount() {
         const { setInfoList } = this.props
         // 触发setInfoList action
-        // setInfoList()
+        setInfoList()
     }
     componentWillUnmount() {
         const { setPageTitle } = this.props
@@ -33,17 +33,17 @@ class ReduxComponent extends React.Component {
             <div>
                 <h1>{pageTitle}</h1>
                 <Button type='primary' onClick={this.changeTitle}>改变标题</Button>
-                {/* {
+                {
                     infoList.length > 0 ? (
                         <ul>
                             {
                                 infoList.map((item, index) => (
-                                    <li>{item.data}</li>
+                                    <li key={item.tid}>{item.tname}</li>
                                 ))
                             }
                         </ul>
                     ):null
-                } */}
+                }
             </div>
         )
     }
