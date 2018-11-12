@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from 'antd'
 
-import store from '../../../store/index.js' 
+// import store from '../../../store/index.js' 
 
 class ReduxComponent extends React.Component {
     constructor(props) {

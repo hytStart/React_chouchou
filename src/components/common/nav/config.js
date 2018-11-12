@@ -13,10 +13,10 @@ const menuConfig = {
             component: 'ui',
             subs: [
                 {
-                    path: '/home/ui/echarts',
+                    path: '/home/ui/drag',
                     title: '拖拽',
                     icon: 'colum-height',
-                    component: 'echarts',
+                    component: 'drag',
                 },
                 {
                     path: '/home/ui/recharts',
@@ -25,10 +25,10 @@ const menuConfig = {
                     component: 'recharts',
                 },
                 {
-                    path: '/home/ui/recharts',
+                    path: '/home/ui/picture',
                     title: '画廊',
                     icon: 'picture',
-                    component: 'recharts',
+                    component: 'picture',
                 },
                 {
                     path: '/home/ui/recharts',

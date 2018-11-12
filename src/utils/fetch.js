@@ -2,8 +2,8 @@
  * @Description: fetch 封装
  * @Author: Yiting  Huang
  * @Date: 2018-11-06 15:14:24
- * @LastEditTime: 2018-11-09 18:04:25
- * @LastEditors: Yiting  Huang
+ * @LastEditTime: 2018-11-09 18:26:10
+ * @LastEditors: Please set LastEditors
  * 1. 超时 2. 状态码 3. cookie 4. 跨域
  * 待完善 jsonp polyfill
  */
@@ -51,7 +51,7 @@ class HttpFetch {
      * @returns {Promise.<*>}
      */
     static timeoutFetch = (original_fetch, timeout = 30000) => {
-        let timeout_promise = new Promise((resolve, reject) => {
+        const timeout_promise = new Promise((resolve, reject) => {
             // 请求超时处理
             setTimeout(() => {
                 reject('timeout promise')
