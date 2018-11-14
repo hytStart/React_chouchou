@@ -1,3 +1,11 @@
+/*
+ * @Description: In User Settings Edit
+ * @Author: Yiting Huang
+ * @Date: 2018-11-12 19:15:49
+ * @LastEditTime: 2018-11-13 12:27:42
+ * @LastEditors: Yiting Huang
+ */
+
 import React from 'react'
 import { Card } from 'antd'
 

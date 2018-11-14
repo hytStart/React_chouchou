@@ -1,0 +1,19 @@
+.bannerItem {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+.eleItem{
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+}
+.bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}

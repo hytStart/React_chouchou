@@ -1,3 +1,11 @@
+/*
+ * @Description: In User Settings Edit
+ * @Author: Yiting Huang
+ * @Date: 2018-11-06 12:00:31
+ * @LastEditTime: 2018-11-13 12:28:14
+ * @LastEditors:Yiting Huang
+ */
+
 import React from 'react'
 import { Button } from 'antd'
 

@@ -37,10 +37,10 @@ const menuConfig = {
                     component: 'recharts',
                 },
                 {
-                    path: '/home/ui/recharts',
+                    path: '/home/ui/banner',
                     title: '轮播图',
                     icon: 'pic-center',
-                    component: 'recharts',
+                    component: 'banner',
                 },
             ]
         },  
@@ -82,6 +82,12 @@ const menuConfig = {
                     icon: 'ordered-list',
                     component: 'list',
                 },
+                {
+                    path: '/home/table/upload',
+                    title: '文件',
+                    icon: 'to-top',
+                    component: 'upload',
+                },
             ]
         },
         {
@@ -95,6 +101,20 @@ const menuConfig = {
             title: 'redux',
             icon: 'fork',
             component: 'redux',
+        },
+        {
+            path: '/home/other',
+            title: '其他',
+            icon: 'mobile',
+            component: 'other',
+            subs: [
+                {
+                    path: '/home/other/commonly',
+                    title: '常用方法',
+                    icon: 'radar-chart',
+                    component: 'form',
+                },
+            ]
         },
     ]
 }
