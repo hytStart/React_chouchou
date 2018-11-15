@@ -9,6 +9,8 @@ import Picture from '../components/home/ui/picture/picture.js'
 import Banner from '../components/home/ui/banner/banner.js'
 import Upload from '../components/home/table/upload/upload.js'
 import Commonly from '../components/home/other/commonly/commonly.js'
+import Echarts from '../components/home/chart/echarts/index.js'
+import Highcharts from '../components/home/chart/highcharts/index.js'
 
 const creatRouters = path => (
     <Switch>
@@ -19,6 +21,8 @@ const creatRouters = path => (
         <Route exact path={`${path}/ui/banner`} component={Banner} />
         <Route exact path={`${path}/table/upload`} component={Upload} />
         <Route exact path={`${path}/other/commonly`} component={Commonly} />
+        <Route exact path={`${path}/chart/echarts`} component={Echarts} />
+        <Route exact path={`${path}/chart/highcharts`} component={Highcharts} />
         <Route path="*" component={Notfound} />
         {/* <Route render={() => <Redirect to='/404' />} /> */}
   </Switch>
