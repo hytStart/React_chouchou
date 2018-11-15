@@ -2,7 +2,7 @@
  * @Description: 常用方法ui
  * @Author: Yiting Huang
  * @Date: 2018-11-14 11:19:13
- * @LastEditTime: 2018-11-14 14:34:04
+ * @LastEditTime: 2018-11-15 12:29:12
  * @LastEditors: Please set LastEditors
  */
 
@@ -12,6 +12,7 @@ import moment from 'moment'
 
 import Debounce from './debounce.js'
 import Amount from './amount.js'
+import Throttle from './throttle.js'
 
 const { RangePicker } = DatePicker
 
@@ -39,6 +40,7 @@ class Commonly extends React.Component {
                 </Row>
                 <Debounce />
                 <Amount />
+                <Throttle />
             </div>
         )
     }
