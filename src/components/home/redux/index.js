@@ -2,8 +2,8 @@
  * @Description: In User Settings Edit
  * @Author: Yiting Huang
  * @Date: 2018-11-06 12:00:31
- * @LastEditTime: 2018-11-13 12:28:14
- * @LastEditors:Yiting Huang
+ * @LastEditTime: 2018-12-25 18:16:36
+ * @LastEditors: Please set LastEditors
  */
 
 import React from 'react'
@@ -37,6 +37,7 @@ class ReduxComponent extends React.Component {
     }
     render() {
         const { pageTitle, infoList } = this.props
+        console.log('this.props', this.props)
         return(
             <div>
                 <h1>{pageTitle}</h1>

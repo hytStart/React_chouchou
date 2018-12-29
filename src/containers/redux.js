@@ -4,7 +4,8 @@ import { setPageTitle, setInfoList } from '../action/index.js'
 
 import ReduxComponent from '../components/home/redux/index.js'
 // mapStateToProps：将state映射到组件的props中
-const mapStateToProps = (state) => {
+// mapStateToProps会订阅 Store，每当state更新的时候，就会自动执行，重新计算 UI 组件的参数，从而触发 UI 组件的重新渲染。
+const mapStateToProps = (state, ownProps) => {
     return {
       pageTitle: state.pageTitle,
       infoList: state.infoList

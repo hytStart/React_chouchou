@@ -22,7 +22,7 @@ class KeyNoIndex extends React.Component {
     renderDom = _ => {
         const { data } = this.state
         return data.map((item, index) => (
-            <div className={style.testKey}>
+            <div className={style.testKey} key={index}>
                 <TimePicker defaultValue={item ? moment(item, 'HH:mm') : null} format="HH:mm"/>
                 <Button type="primary" onClick={this.addTimepicker(index)}>增加</Button>
                 <Button onClick={this.deleteTimepicker(index)}>删除</Button>

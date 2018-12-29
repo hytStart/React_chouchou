@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import App from './components/app/App.js'
 import Home from './components/home/home.js'
 import Notfound from './components/404/index.js'
+import Swipers from './components/home/ui/swiper/swipers.js'
+// import Banner from './components/home/ui/banner/banner'
 
 class Router extends React.Component {
     /**
@@ -39,7 +41,8 @@ class Router extends React.Component {
 
                     <Route exact path="/app" component={App} />
                     <Route path="/home" component={Home} />
-
+                    <Route path="/swiper" component={Swipers} />
+                    {/* <Route exact path="/home/ui/banner" component={Banner} /> */}
                     {/* 别的都是exact,就可以404了 */}
                     <Route path="/404" component={Notfound} />
                     <Route path="*" component={Notfound} />

@@ -47,7 +47,7 @@ class Home extends React.Component {
                             {creatRouters(this.props.match.path)}
                         </Content>
                         <Footer style={{ textAlign: 'center' }}>
-                            React-Redux-Router ©2018 Created by Yiting Huang
+                            React-Redux-thunk-Router ©2018 Created by Yiting Huang
                         </Footer>
                     </Layout>
                 </Layout>

@@ -2,8 +2,8 @@
     flex: 1;
     display: flex;
     min-width: 1200px;
-    height: 100vh;
-    min-height: 680px;
+    min-height: 100vh;
+    // min-height: 680px;
     :global(.ant-menu-item:first-of-type) {
         margin-top: 0;
     }

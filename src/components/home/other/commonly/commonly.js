@@ -2,7 +2,7 @@
  * @Description: 常用方法ui
  * @Author: Yiting Huang
  * @Date: 2018-11-14 11:19:13
- * @LastEditTime: 2018-11-30 18:05:42
+ * @LastEditTime: 2018-12-25 13:50:51
  * @LastEditors: Please set LastEditors
  */
 
@@ -15,6 +15,9 @@ import Amount from './amount.js'
 import Throttle from './throttle.js'
 import Trie from './trie.js'
 import KeyNoIndex from './keyNoIndex.js'
+import SetState from './setState.js'
+import ReactHooks from './reactHooks.js'
+import Lazyload from './lazyload'
 
 const { RangePicker } = DatePicker
 
@@ -45,6 +48,9 @@ class Commonly extends React.Component {
                 <Throttle />
                 <Trie />
                 <KeyNoIndex />
+                <SetState />
+                <ReactHooks />
+                <Lazyload />
             </div>
         )
     }

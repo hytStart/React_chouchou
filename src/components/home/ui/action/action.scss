@@ -1,0 +1,242 @@
+.container {
+    :global(.ant-card-head) {
+        color: #fff;
+    }
+
+    .space-section {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        .star {
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #FFF;
+            top: 10px;
+            left: 200px;
+            position: relative;
+            animation: star-ani 6s infinite ease-out;
+            box-shadow: 0 0 5px 5px rgba(255, 255, 255, .3);
+            opacity: 1;
+        }
+        .star:after {
+            content: '';
+            display: block;
+            top: 0px;
+            left: 40%;
+            border: 0px solid #fff;
+            border-width: 0px 90px 2px 90px;
+            border-color: transparent transparent transparent rgba(255, 255, 255, .3);
+            transform: rotate(-45deg) translate3d(1px, 3px, 0);
+            box-shadow: 0 0 1px 0 rgba(255, 255, 255, .1);
+            transform-origin: 0% 100%;
+        }
+
+        .shine {
+            background: url('../../../../images/action/icon-star1.png') no-repeat center;
+            background-size: 100%;
+            width: 30px;
+            height: 40px;
+            position: absolute;
+            top: 90px;
+            left: 100px;
+            opacity: 0;
+            animation: opacity-change 0.5s ease-in-out infinite;
+        }
+
+        .people {
+            width: 20px;
+            height: 64px;
+            position: absolute;
+            left: 10px;
+            top: 130px;
+            background: url('../../../../images/action/people.png') no-repeat center;
+            background-size: 100%; 
+            opacity: 0;
+            animation: peopleUp 1s ease-in-out 0.5s both;
+        }
+        .people_move {
+            background: url('../../../../images/action/people_moveleft.gif');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 64px;
+            position: absolute;
+            left: 10px;
+            top: 130px;
+            opacity: 1;
+            animation: PeopleMove 1.5s linear 0s both;
+        }
+        .people_paused {
+            width: 20px;
+            height: 64px;
+            background: url('../../../../images/action/people.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation-play-state: paused;
+        }
+
+        .brige {
+            width: 0px;
+            background: url('../../../../images/action/bridge.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100px;
+            position: absolute;
+            top: 40px;
+            left: 30px;
+            animation: BridgeFadeIn 3s linear both;
+            opacity: 0;
+        }
+
+        .icon-ciecle {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 80px;
+            width: 30px;
+            height: 30px;
+            background: url('../../../../images/action/icon-light.png') no-repeat center;
+            background-size: 100%; 
+            animation: warn 1.2s ease-in-out 0s infinite both;
+        }
+
+        .music_img {
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 80px;
+            animation: rotating 3s linear infinite;
+            animation-play-state: running;
+        }
+        .rotate-pause {
+            animation-play-state: paused;
+        }
+
+        .text-item-0 {
+            position: absolute;
+            width: 25px;
+            height: 75px;
+            top: 60px;
+            left: 100px;
+            background: url('../../../../images/action/S-start.png') no-repeat center;
+            background-size: 100%;
+            animation: letter-0 1.5s ease-in-out both, letter-0-1 2.0s ease-in-out 1.5s both;
+        }
+    }
+}
+@keyframes star-ani {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(0) translate3d(0, 0, 0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(0) translate3d(-100px, 100px, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+    }
+}
+@keyframes opacity-change {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes BridgeFadeIn {
+    0% {
+        width: 0px;
+        opacity: 0;
+    }
+    100% {
+        width: 200px;
+        opacity: 1;
+    }
+}
+@keyframes warn {
+    0% {
+        transform: scale(0.1);
+        opacity: 0.0;
+    }
+    25% {
+        transform: scale(0.2);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(0.4);
+        opacity: 0.5;
+    }
+    75% {
+        transform: scale(0.6);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.0;
+    }
+}
+@keyframes rotating {
+    0% {
+    	transform: rotate(0deg);
+     }
+    100% { 
+		transform: rotate(360deg);
+     }
+}
+@keyframes letter-0 {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(80px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+@keyframes letter-0-1 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        top: -80px;
+        opacity: 0;
+    }
+}
+@keyframes peopleUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes PeopleMove {
+    0% {
+        left: 10px;
+        top: 130px;
+    }
+    100% {
+        top: 20px;
+        left: 180px;
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

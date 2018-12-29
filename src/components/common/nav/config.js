@@ -42,6 +42,18 @@ const menuConfig = {
                     icon: 'pic-center',
                     component: 'banner',
                 },
+                {
+                    path: '/home/ui/swiper',
+                    title: 'Swipper',
+                    icon: 'pic-center',
+                    component: 'swipper',
+                },
+                {
+                    path: '/home/ui/action',
+                    title: 'Action',
+                    icon: 'pic-center',
+                    component: 'action',
+                },
             ]
         },  
         {
@@ -113,6 +125,12 @@ const menuConfig = {
                     title: '常用方法',
                     icon: 'radar-chart',
                     component: 'form',
+                },
+                {
+                    path: '/home/other/RenderCallback',
+                    title: 'RenderCallback组件',
+                    icon: 'database',
+                    component: 'zujian',
                 },
             ]
         },
