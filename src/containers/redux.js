@@ -7,8 +7,8 @@ import ReduxComponent from '../components/home/redux/index.js'
 // mapStateToProps会订阅 Store，每当state更新的时候，就会自动执行，重新计算 UI 组件的参数，从而触发 UI 组件的重新渲染。
 const mapStateToProps = (state, ownProps) => {
     return {
-      pageTitle: state.pageTitle,
-      infoList: state.infoList
+        pageTitle: state.pageTitle,
+        infoList: state.infoList
     }
     // return state 也行
 }

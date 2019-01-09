@@ -105,7 +105,7 @@ class Trie extends React.Component {
 
     render() {
         const { value } = this.state
-         return (
+        return (
             <Row gutter={4} style={{ marginTop: '20px' }}>
                 <Col span={4}>
                     4. 性能优化--字典树

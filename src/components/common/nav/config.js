@@ -132,6 +132,12 @@ const menuConfig = {
                     icon: 'database',
                     component: 'zujian',
                 },
+                {
+                    path: '/home/other/reactNew',
+                    title: 'react新特性',
+                    icon: 'database',
+                    component: 'reactNew',
+                },
             ]
         },
     ]

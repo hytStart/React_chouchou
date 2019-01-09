@@ -12,6 +12,7 @@ import Action from '../components/home/ui/action/index.js'
 import Upload from '../components/home/table/upload/upload.js'
 import Commonly from '../components/home/other/commonly/commonly.js'
 import RenderCallback from '../components/home/other/zujian/index.js'
+import ReactNew from '../components/home/other/reactNew/index.js'
 import Echarts from '../components/home/chart/echarts/index.js'
 import Highcharts from '../components/home/chart/highcharts/index.js'
 
@@ -27,6 +28,7 @@ const creatRouters = path => (
         <Route exact path={`${path}/table/upload`} component={Upload} />
         <Route exact path={`${path}/other/commonly`} component={Commonly} />
         <Route exact path={`${path}/other/RenderCallback`} component={RenderCallback} />
+        <Route exact path={`${path}/other/reactNew`} component={ReactNew} />
         <Route exact path={`${path}/chart/echarts`} component={Echarts} />
         <Route exact path={`${path}/chart/highcharts`} component={Highcharts} />
         <Route path="*" component={Notfound} />

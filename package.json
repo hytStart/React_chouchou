@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@svgr/webpack": "2.4.1",
     "antd": "^3.10.1",
     "babel-core": "7.0.0-bridge.0",
@@ -69,10 +70,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "test": "node scripts/test.js",
+    "lint": "eslint src/*"
   },
   "browserslist": [
     ">0.2%",
@@ -122,6 +121,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "echarts": "^4.2.0-rc.2",
+    "eslint-config-airbnb": "^17.1.0",
     "highcharts": "^6.2.0",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
