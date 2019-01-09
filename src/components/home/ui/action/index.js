@@ -2,12 +2,17 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2018-12-29 10:08:39
- * @LastEditTime: 2019-01-09 11:09:46
+ * @LastEditTime: 2019-01-09 11:38:18
  * @LastEditors: Please set LastEditors
  */
 
 import React from 'react'
-import { Row, Col, Card, notification } from 'antd'
+import {
+    Row,
+    Col,
+    Card,
+    notification,
+} from 'antd'
 import style from './action.scss'
 import musicOpen from '../../../../images/action/music-icon.png'
 import musicClose from '../../../../images/action/music-close.png'
