@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2018-12-29 10:08:39
- * @LastEditTime: 2018-12-29 14:30:13
+ * @LastEditTime: 2019-01-09 11:04:29
  * @LastEditors: Please set LastEditors
  */
 
@@ -22,6 +22,7 @@ class Action extends React.Component {
         }
         this.start2 = null
     }
+
     componentDidUpdate() {
         const { peopleMove } = this.state
         if (peopleMove) {
