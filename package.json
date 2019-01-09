@@ -46,10 +46,10 @@
     "prop-types": "^15.6.2",
     "rc-banner-anim": "^2.1.2",
     "rc-tween-one": "^2.2.17",
-    "react": "^16.7.0-alpha.0",
+    "react": "^16.7.0-alpha.2",
     "react-app-polyfill": "^0.1.3",
     "react-dev-utils": "^6.0.5",
-    "react-dom": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.2",
     "react-draggable": "^3.0.5",
     "react-id-swiper": "^1.6.8",
     "react-redux": "^5.1.0",
@@ -129,13 +129,18 @@
     "node-sass": "^4.9.4",
     "react-hot-loader": "^4.3.12"
   },
+  "husky": {
+    "hooks": {  
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "src/**/*.js": [
-        "eslint",
-        "git add"
+      "eslint",
+      "git add"
     ],
     "src/**/*.less": [
-        "git add"
+      "git add"
     ]
   }
 }

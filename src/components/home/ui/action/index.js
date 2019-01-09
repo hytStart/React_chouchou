@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2018-12-29 10:08:39
- * @LastEditTime: 2019-01-09 11:38:18
+ * @LastEditTime: 2019-01-09 14:19:55
  * @LastEditors: Please set LastEditors
  */
 
@@ -49,6 +49,7 @@ class Action extends React.Component {
             play: !this.state.play,
         })
     }
+    
     onTouchStart = _ => {
         this.setState({
             peopleMove: true,
