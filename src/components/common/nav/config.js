@@ -54,8 +54,14 @@ const menuConfig = {
                     icon: 'pic-center',
                     component: 'action',
                 },
-            ]
-        },  
+                {
+                    path: '/home/ui/flip',
+                    title: 'Flip',
+                    icon: 'pic-center',
+                    component: 'flip',
+                },
+            ],
+        },
         {
             path: '/home/chart',
             title: '图',
@@ -74,7 +80,7 @@ const menuConfig = {
                     icon: 'area-chart',
                     component: 'highcharts',
                 },
-            ]
+            ],
         },
         {
             path: '/home/table',
@@ -100,7 +106,7 @@ const menuConfig = {
                     icon: 'to-top',
                     component: 'upload',
                 },
-            ]
+            ],
         },
         {
             path: '/home/canvas',
@@ -138,8 +144,8 @@ const menuConfig = {
                     icon: 'database',
                     component: 'reactNew',
                 },
-            ]
+            ],
         },
-    ]
+    ],
 }
 export default menuConfig

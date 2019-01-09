@@ -9,6 +9,7 @@ import Picture from '../components/home/ui/picture/picture.js'
 import Banner from '../components/home/ui/banner/banner.js'
 import Swipers from '../components/home/ui/swiper/swipers.js'
 import Action from '../components/home/ui/action/index.js'
+import Flip from '../components/home/ui/Flip/index.js'
 import Upload from '../components/home/table/upload/upload.js'
 import Commonly from '../components/home/other/commonly/commonly.js'
 import RenderCallback from '../components/home/other/zujian/index.js'
@@ -25,6 +26,7 @@ const creatRouters = path => (
         <Route exact path={`${path}/ui/banner`} component={Banner} />
         <Route exact path={`${path}/ui/swiper`} component={Swipers} />
         <Route exact path={`${path}/ui/action`} component={Action} />
+        <Route exact path={`${path}/ui/flip`} component={Flip} />
         <Route exact path={`${path}/table/upload`} component={Upload} />
         <Route exact path={`${path}/other/commonly`} component={Commonly} />
         <Route exact path={`${path}/other/RenderCallback`} component={RenderCallback} />
@@ -33,7 +35,7 @@ const creatRouters = path => (
         <Route exact path={`${path}/chart/highcharts`} component={Highcharts} />
         <Route path="*" component={Notfound} />
         {/* <Route render={() => <Redirect to='/404' />} /> */}
-  </Switch>
+    </Switch>
 )
 
 export default creatRouters

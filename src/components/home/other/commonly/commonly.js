@@ -2,7 +2,7 @@
  * @Description: 常用方法ui
  * @Author: Yiting Huang
  * @Date: 2018-11-14 11:19:13
- * @LastEditTime: 2018-12-25 13:50:51
+ * @LastEditTime: 2019-01-09 17:04:08
  * @LastEditors: Please set LastEditors
  */
 
@@ -18,20 +18,18 @@ import KeyNoIndex from './keyNoIndex.js'
 import SetState from './setState.js'
 import ReactHooks from './reactHooks.js'
 import Lazyload from './lazyload'
+import RequestAnimFrame from './requestAnimFrame.js'
 
 const { RangePicker } = DatePicker
 
 class Commonly extends React.Component {
-
     disabledDate = current => current && (current < moment().add(-5, 'day') || current >= moment().startOf('day'))
-    
+
     render() {
         return (
             <div>
                 <Row gutter={4}>
-                    <Col span={4}>
-                        1. 时间区间
-                    </Col>
+                    <Col span={4}>1. 时间区间</Col>
                     <Col span={8}>
                         <RangePicker
                             showTime={{ format: 'HH:mm' }}
@@ -51,6 +49,7 @@ class Commonly extends React.Component {
                 <SetState />
                 <ReactHooks />
                 <Lazyload />
+                <RequestAnimFrame />
             </div>
         )
     }

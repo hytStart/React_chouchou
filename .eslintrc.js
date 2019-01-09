@@ -22,6 +22,7 @@ const rules = {
     ],
     'no-underscore-dangle': 'off',
     'react/jsx-no-bind': 'off',
+    'react/jsx-one-expression-per-line': 'off',
     'no-unused-vars': ['error', { 'args': 'none' }],
     'jsx-a11y/label-has-for': 'off',
     'react/no-array-index-key': 'off',
