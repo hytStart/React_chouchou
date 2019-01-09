@@ -128,5 +128,14 @@
     "less-loader": "^4.1.0",
     "node-sass": "^4.9.4",
     "react-hot-loader": "^4.3.12"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+        "eslint",
+        "git add"
+    ],
+    "src/**/*.less": [
+        "git add"
+    ]
   }
 }
