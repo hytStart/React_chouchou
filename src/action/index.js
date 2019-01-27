@@ -32,8 +32,10 @@ export function setInfoList (data) {
         //     //     dispatch({ type: 'SET_INFO_LIST', data: data })
         //     // }
         // })
-        HttpFetch.fetchJson('GET', 'http://localhost/Desktop/thinkphp-3.2/api/slogin/test').then(data => {
+        HttpFetch.fetchJson('GET', 'http://localhost:3000/api/slogin/test').then(data => {
             dispatch({ type: 'SET_INFO_LIST', data: data })
+        }).catch(e => {
+            dispatch({ type: 'SET_INFO_LIST_FAILED', e: e })
         })
     }
 }

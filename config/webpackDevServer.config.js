@@ -36,6 +36,9 @@ module.exports = function(proxy, allowedHost) {
     // Silence WebpackDevServer's own logs since they're generally not useful.
     // It will still show compile warnings and errors with this setting.
     clientLogLevel: 'none',
+    stats: {
+      builtAt: true,
+    },
     // By default WebpackDevServer serves physical files from current directory
     // in addition to all the virtual build products that it serves from memory.
     // This is confusing because those files won’t automatically be available in
@@ -50,7 +53,8 @@ module.exports = function(proxy, allowedHost) {
     // for files like `favicon.ico`, `manifest.json`, and libraries that are
     // for some reason broken when imported through Webpack. If you just want to
     // use an image, put it in `src` and `import` it from JavaScript instead.
-    contentBase: paths.appPublic,
+    contentBase: paths.appPublic,  // 这里有疑问 （）+ proxy
+    // contentBase: './src/', // 这里有疑问 （）+ proxy
     // By default files from `contentBase` will not trigger a page reload.
     watchContentBase: true,
     // Enable hot reloading server. It will provide /sockjs-node/ endpoint
@@ -82,7 +86,7 @@ module.exports = function(proxy, allowedHost) {
       disableDotRule: true,
     },
     public: allowedHost,
-    proxy,
+    // proxy,
     before(app, server) {
       if (fs.existsSync(paths.proxySetup)) {
         // This registers user provided middleware for proxy reasons
@@ -101,5 +105,20 @@ module.exports = function(proxy, allowedHost) {
       // https://github.com/facebook/create-react-app/issues/2272#issuecomment-302832432
       app.use(noopServiceWorkerMiddleware());
     },
+    proxy: {
+      '/api/*': {
+          target: `http://localhost:3000`,
+          pathRewrite(pathsh, req) {
+              console.info(`本地请求地址：${req.originalUrl}`)
+              console.info(`${pathsh.replace(/^\/api/, '/testdata')}.json`)
+              return `${pathsh.replace(/^\/api/, '/testdata')}.json`
+          },
+          changeOrigin: true,
+          onProxyReq(proxyReq, req, res) {
+              proxyReq.method = 'GET'
+              proxyReq.setHeader('Access-Control-Allow-Origin', true)
+          },
+      },
+  },
   };
 };

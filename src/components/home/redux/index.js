@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: Yiting Huang
  * @Date: 2018-11-06 12:00:31
- * @LastEditTime: 2018-12-25 18:16:36
+ * @LastEditTime: 2019-01-18 12:14:39
  * @LastEditors: Please set LastEditors
  */
 
@@ -20,7 +20,10 @@ class ReduxComponent extends React.Component {
     componentDidMount() {
         const { setInfoList } = this.props
         // 触发setInfoList action
-        setInfoList()
+        setTimeout(() => { // setTimeout验证reducer不返回 { ...state, infolist }, 看看会不会props的数据，和公司saga比较。不明白为啥
+            
+            setInfoList()
+        }, 3000);
     }
     componentWillUnmount() {
         const { setPageTitle } = this.props
@@ -37,6 +40,7 @@ class ReduxComponent extends React.Component {
     }
     render() {
         const { pageTitle, infoList } = this.props
+        console.log('222222222222', Object.prototype.toString.call(infoList))
         console.log('this.props', this.props)
         return(
             <div>

@@ -79,7 +79,8 @@ class SelfUpload extends Component {
                     accept="image/*"
                     ref={ dom => { this.imgLocal = dom } }
                 />
-                <div className={style['drap-area']} onDrop={this.drapImage}>
+                <div className={style['drap-area']} onDrop={this.drapImage} onDragOver={this.rawEvent}
+    onDragEnter={this.rawEvent}>
                     拖拽图片到此
                 </div>
                 预览：

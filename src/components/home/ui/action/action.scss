@@ -130,6 +130,25 @@
         }
     }
 }
+.parabloa-boll {
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.outer {
+    animation: ballX linear 1s both;
+}
+.inner {
+    width: 30px;
+    height: 30px;
+    background-color: peru;
+    animation: ballY 1s both;
+    animation-timing-function: cubic-bezier(.55,0,.8,.36);
+}
 @keyframes star-ani {
     0% {
         opacity: 0;
@@ -238,5 +257,21 @@
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
+    }
+}
+@keyframes ballX {
+    0% {
+        transform: translateX(0px)
+    }
+    100% {
+        transform: translateX(400px)
+    }
+}
+@keyframes ballY {
+    0% {
+        transform: translateY(0px)
+    }
+    100% {
+        transform: translateY(400px)
     }
 }

@@ -1,4 +1,11 @@
 import { combineReducers } from 'redux'
+import { Modal } from 'antd'
+
+const errorModal = parma => (
+    Modal.error({
+        title: parma,
+    })
+)
 
 // 声明默认值
 // 同步数据：pageTitle
@@ -21,7 +28,14 @@ function pageTitle (state = defaultState.pageTitle, action) {
 function infoList (state = defaultState.infoList, action) {
     switch (action.type) {
         case 'SET_INFO_LIST':
-            return action.data
+            const {
+                infoList,
+            } = action.data
+            console.log('11111111111', Object.prototype.toString.call(infoList))
+            return infoList
+        case 'SET_INFO_LIST_FAILED':
+            errorModal(action.e)
+            return state
         default:
             return state
     }

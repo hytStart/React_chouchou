@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2018-12-29 10:08:39
- * @LastEditTime: 2019-01-09 14:59:41
+ * @LastEditTime: 2019-01-26 13:52:16
  * @LastEditors: Please set LastEditors
  */
 
@@ -16,6 +16,8 @@ import {
 import style from './action.scss'
 import musicOpen from '../../../../images/action/music-icon.png'
 import musicClose from '../../../../images/action/music-close.png'
+import Parabloa from './parabola.js'
+import ParabloaCss from './parabolaCss.js'
 
 class Action extends React.Component {
     constructor(props) {
@@ -175,6 +177,24 @@ class Action extends React.Component {
                                         noSwipingClass: 'stop-swiping',<br/>
                                     </code>
                             </div>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row gutter={4} style={{ marginTop: '20px' }}>
+                    <Col span={6}>
+                        <Card
+                            title="抛物线Js"
+                            style={{ width: 300, height: 300, background: '#232c68', color: '#fff' }}
+                        >
+                            <Parabloa />
+                        </Card>
+                    </Col>
+                    <Col span={6}>
+                        <Card
+                            title="抛物线css"
+                            style={{ width: 300, height: 300, background: '#232c68', color: '#fff' }}
+                        >
+                            <ParabloaCss />
                         </Card>
                     </Col>
                 </Row>

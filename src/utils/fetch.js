@@ -2,7 +2,7 @@
  * @Description: fetch 封装
  * @Author: Yiting  Huang
  * @Date: 2018-11-06 15:14:24
- * @LastEditTime: 2018-11-09 18:26:10
+ * @LastEditTime: 2019-01-22 11:06:29
  * @LastEditors: Please set LastEditors
  * 1. 超时 2. 状态码 3. cookie 4. 跨域
  * 待完善 jsonp polyfill
@@ -38,6 +38,8 @@ class HttpFetch {
     static checkStatus = response => {
         if (response.status >= 200 && response.status < 300) {
             return response
+        } else if (response.status === 401) {
+            window.location.href = 'loginin'
         }
         const error = new Error(response.statusText)
         error.response = response
@@ -95,8 +97,17 @@ static fetchJson(method, url, params = {}) {
                 fetch(url, options)
                     .then(HttpFetch.checkStatus)
                     .then(response => response.json())
-                    .then(data => {
-                        resolve(data)
+                    .then(datas => {
+                        const {
+                            flag,
+                            message,
+                            data,
+                        } = datas
+                        if (flag === 1) {
+                            resolve(data)
+                        } else if (flag === 0) {
+                            reject(message)
+                        }
                     })
                     .catch(e => {
                         reject('error lalala')
