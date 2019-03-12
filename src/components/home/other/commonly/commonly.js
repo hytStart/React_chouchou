@@ -2,49 +2,60 @@
  * @Description: 常用方法ui
  * @Author: Yiting Huang
  * @Date: 2018-11-14 11:19:13
- * @LastEditTime: 2019-01-25 11:16:25
+ * @LastEditTime: 2019-03-12 10:48:05
  * @LastEditors: Please set LastEditors
  */
 
 import React from 'react'
 import { Row, Col, DatePicker, Select } from 'antd'
-import moment from 'moment'
+import dayjs from 'dayjs'
 
 
-import Debounce from './debounce.js'
-import Amount from './amount.js'
-import Throttle from './throttle.js'
-import Trie from './trie.js'
-import KeyNoIndex from './keyNoIndex.js'
-import SetState from './setState.js'
-import ReactHooks from './reactHooks.js'
-import Lazyload from './lazyload'
-import RequestAnimFrame from './requestAnimFrame.js'
-import Repeat from './repeat.js'
+// import Debounce from './debounce.js'
+// import Amount from './amount.js'
+// import Throttle from './throttle.js'
+// import Trie from './trie.js'
+// import KeyNoIndex from './keyNoIndex.js'
+// import SetState from './setState.js'
+// import ReactHooks from './reactHooks.js'
+// import Lazyload from './lazyload'
+// import RequestAnimFrame from './requestAnimFrame.js'
+// import Repeat from './repeat.js'
 
 const { RangePicker } = DatePicker
-const Option = Select.Option
+const { Option } = Select
 
 class Commonly extends React.Component {
-    disabledDate = current => current && (current < moment().add(-5, 'day') || current >= moment().startOf('day'))
+    // disabledDate = current => current && (current < moment().add(-5, 'day') || current >= moment().startOf('day'))
+    state = {
+        dateValue: '2018-01-01',
+    }
+
+    onDateChange = (a, dateValue) => {
+        this.setState({
+            dateValue,
+        })
+    }
 
     render() {
+        const { dateValue } = this.state
         return (
             <div>
                 <Row gutter={4}>
                     <Col span={4}>1. 时间区间</Col>
                     <Col span={8}>
-                        <RangePicker
+                        <DatePicker onChange={this.onDateChange} value={dayjs(dateValue)} />
+                        {/* <RangePicker
                             showTime={{ format: 'HH:mm' }}
                             format="YYYY-MM-DD HH:mm"
                             placeholder={['Start Time', 'End Time']}
                             // onChange={onChange}
                             // onOk={onOk}
                             disabledDate={this.disabledDate}
-                        />
+                        /> */}
                     </Col>
                 </Row>
-                <Row gutter={4}>
+                {/* <Row gutter={4}>
                     <Col span={4}>1. 时间区间</Col>
                     <Col span={8}>
                         <Select
@@ -69,7 +80,7 @@ class Commonly extends React.Component {
                 <ReactHooks />
                 <Lazyload />
                 <RequestAnimFrame />
-                <Repeat />
+                <Repeat /> */}
             </div>
         )
     }
