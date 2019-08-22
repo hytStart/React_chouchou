@@ -3,6 +3,7 @@ import HttpFetch from '../utils/fetch.js'
 
 // action也是函数
 export function setPageTitle (data) {
+    console.log('####', data)
     return (dispatch, getState) => {
         dispatch({ type: 'SET_PAGE_TITLE', data: data })
     }

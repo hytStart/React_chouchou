@@ -33,3 +33,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReduxComponent)
+
+// export default connect(mapStateToProps, { setPageTitle, setInfoList })(ReduxComponent)
+// 也可以直接传actions, 在component中传参数用{}

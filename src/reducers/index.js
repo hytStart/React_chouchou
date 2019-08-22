@@ -31,7 +31,6 @@ function infoList (state = defaultState.infoList, action) {
             const {
                 infoList,
             } = action.data
-            console.log('11111111111', Object.prototype.toString.call(infoList))
             return infoList
         case 'SET_INFO_LIST_FAILED':
             errorModal(action.e)

@@ -12,12 +12,14 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-named-asset-import": "^0.2.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^5.0.4",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "^2.4.1",
     "css-loader": "1.0.0",
+    "dayjs": "^1.8.10",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
     "eslint": "5.6.0",
@@ -46,10 +48,11 @@
     "prop-types": "^15.6.2",
     "rc-banner-anim": "^2.1.2",
     "rc-tween-one": "^2.2.17",
-    "react": "^16.7.0-alpha.2",
+    "react": "^16.8.2",
     "react-app-polyfill": "^0.1.3",
+    "react-cache": "^2.0.0-alpha.1",
     "react-dev-utils": "^6.0.5",
-    "react-dom": "^16.7.0-alpha.2",
+    "react-dom": "^16.8.2",
     "react-draggable": "^3.0.5",
     "react-id-swiper": "^1.6.8",
     "react-redux": "^5.1.0",
@@ -63,6 +66,7 @@
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
     "webpack": "4.19.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "^3.1.9",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "3.6.2"
@@ -71,8 +75,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "eslint src/*",
-    "precommit": "lint-staged"
+    "lint": "eslint src/*"
   },
   "browserslist": [
     ">0.2%",
@@ -129,20 +132,7 @@
     "less-loader": "^4.1.0",
     "lint-staged": "^8.1.0",
     "node-sass": "^4.9.4",
-    "react-hot-loader": "^4.3.12"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint",
-      "git add"
-    ],
-    "src/**/*.less": [
-      "git add"
-    ]
+    "react-hot-loader": "^4.3.12",
+    "react-virtualized": "^9.21.0"
   }
 }

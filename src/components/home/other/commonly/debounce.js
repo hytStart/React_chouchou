@@ -2,7 +2,7 @@
  * @Description: 防抖
  * @Author: Yiting Huang
  * @Date: 2018-11-14 11:27:32
- * @LastEditTime: 2018-11-14 14:26:56
+ * @LastEditTime: 2019-04-12 20:12:05
  * @LastEditors: Please set LastEditors
  *   https://billqiu.github.io/2017/10/15/how-to-debounce-in-react/
  *   https://juejin.im/post/5be693d16fb9a04a053f2f1c
@@ -17,7 +17,7 @@ class Debounce extends React.Component {
         this.state = {
             value: '',
         }
-        this.fnFD = this.debounce(this.fetchAjax, 2000);
+        this.fnFD = this.deb(this.fetchAjax, 2000, true);
     }
 
     handleChange = e => {
@@ -29,6 +29,19 @@ class Debounce extends React.Component {
             value: parma,
         })
         console.log(parma)
+    }
+    deb = (fn, delay, immediate) => {
+        let timer = null
+        return function() {	
+            const context = this
+            timer && clearTimeout(timer)
+            if (immediate) {
+                !timer && fn.apply(context, arguments)
+            }
+            timer = setTimeout(() => {
+                fn.apply(context, arguments)
+            }, delay)
+        }
     }
     debounce = (fn, delay, immediate) => {
         let timer = null;

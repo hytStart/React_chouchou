@@ -2,7 +2,7 @@
  * @Description: 常用方法ui
  * @Author: Yiting Huang
  * @Date: 2018-11-14 11:19:13
- * @LastEditTime: 2019-03-12 10:48:05
+ * @LastEditTime: 2019-07-16 09:47:33
  * @LastEditors: Please set LastEditors
  */
 
@@ -11,16 +11,17 @@ import { Row, Col, DatePicker, Select } from 'antd'
 import dayjs from 'dayjs'
 
 
-// import Debounce from './debounce.js'
-// import Amount from './amount.js'
-// import Throttle from './throttle.js'
-// import Trie from './trie.js'
-// import KeyNoIndex from './keyNoIndex.js'
-// import SetState from './setState.js'
-// import ReactHooks from './reactHooks.js'
-// import Lazyload from './lazyload'
-// import RequestAnimFrame from './requestAnimFrame.js'
-// import Repeat from './repeat.js'
+import Debounce from './debounce.js'
+import Amount from './amount.js'
+import Throttle from './throttle.js'
+import Trie from './trie.js'
+import KeyNoIndex from './keyNoIndex.js'
+import SetState from './setState.js'
+import ReactHooks from './reactHooks.js'
+import Lazyload from './lazyload'
+import RequestAnimFrame from './requestAnimFrame.js'
+import Repeat from './repeat.js'
+import Graphql from './graphql'
 
 const { RangePicker } = DatePicker
 const { Option } = Select
@@ -55,7 +56,7 @@ class Commonly extends React.Component {
                         /> */}
                     </Col>
                 </Row>
-                {/* <Row gutter={4}>
+                <Row gutter={4}>
                     <Col span={4}>1. 时间区间</Col>
                     <Col span={8}>
                         <Select
@@ -80,7 +81,8 @@ class Commonly extends React.Component {
                 <ReactHooks />
                 <Lazyload />
                 <RequestAnimFrame />
-                <Repeat /> */}
+                <Repeat />
+                <Graphql />
             </div>
         )
     }

@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: Yiting Huang
  * @Date: 2018-11-06 12:00:31
- * @LastEditTime: 2019-01-18 12:14:39
+ * @LastEditTime: 2019-03-08 18:41:29
  * @LastEditors: Please set LastEditors
  */
 
@@ -40,7 +40,6 @@ class ReduxComponent extends React.Component {
     }
     render() {
         const { pageTitle, infoList } = this.props
-        console.log('222222222222', Object.prototype.toString.call(infoList))
         console.log('this.props', this.props)
         return(
             <div>

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Button } from 'antd'
 import style from './index.scss'
 
+// 可以把document.getElementByid 变成ths.node. 然后把addeventlisner换成 onchange={this.onchange}
 
 // 兼容阻止冒泡
 export const stopProp =  (e) => {
@@ -56,6 +57,7 @@ class SelfUpload extends Component {
         cb(formdata)
     }
     upFile = formdata => {
+        // eslint-disable-next-line vars-on-top
         for (var pair of formdata.entries()) {
             console.log(pair[0]+ ', ' + pair[1]); 
         }

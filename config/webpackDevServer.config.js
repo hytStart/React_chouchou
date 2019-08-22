@@ -119,6 +119,19 @@ module.exports = function(proxy, allowedHost) {
               proxyReq.setHeader('Access-Control-Allow-Origin', true)
           },
       },
+      '/graphql/*': {
+        target: `http://localhost:4001`,
+        // pathRewrite(pathsh, req) {
+        //     console.info(`本地请求地址：${req.originalUrl}`)
+        //     console.info(`${pathsh.replace(/^\/api/, '/testdata')}.json`)
+        //     return `${pathsh.replace(/^\/api/, '/testdata')}.json`
+        // },
+        // changeOrigin: true,
+        // onProxyReq(proxyReq, req, res) {
+        //     proxyReq.method = 'GET'
+        //     proxyReq.setHeader('Access-Control-Allow-Origin', true)
+        // },
+    },
   },
   };
 };

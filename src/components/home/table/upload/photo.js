@@ -2,7 +2,7 @@
  * @Description: 图片上传
  * @Author:Yiting Huang
  * @Date: 2018-11-13 12:19:37
- * @LastEditTime: 2018-11-14 14:39:54
+ * @LastEditTime: 2019-04-01 20:16:40
  * @LastEditors: Please set LastEditors
  */
 import React from 'react'
